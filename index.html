@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bentuk Robotics — Belajar Robotik TK sampai SMK</title>
+  <meta name="description" content="Bentuk Robotics mengajarkan robotik dari dasar hingga siap kompetisi untuk siswa TK hingga SMK. Sensor, motor, Arduino, coding, dan banyak lagi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <div id="loader" role="status" aria-label="Loading">
+    <div class="ld">
+      <div class="ld-shapes" aria-hidden="true">
+        <i class="c" style="--i:0"></i>
+        <i class="h" style="--i:1"></i>
+        <i class="t" style="--i:2"></i>
+        <i class="s" style="--i:3"></i>
+      </div>
+      <div class="ld-num"><span id="ldn">0</span><sup>%</sup></div>
+      <p class="ld-tag">Menyiapkan robot pertama kamu</p>
+    </div>
+  </div>
+
+  <div id="curtain" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
+  <div id="cur" aria-hidden="true"><b></b></div>
+
+  <header class="hdr" id="hdr">
+    <a class="logo" href="#hero" aria-label="Bentuk Robotics">BENTUK<span class="logo-dot"></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work" data-nav="cases">Proyek</a>
+      <a href="#studio" data-nav="process">Cara Belajar</a>
+      <a href="#services" data-nav="services">Materi</a>
+      <a href="#contact" data-nav="contact">Daftar</a>
+    </nav>
+    <a class="pill" href="#contact">Mulai Belajar</a>
+  </header>
+
+  <main>
+    <section class="sec hero" id="hero" data-state="hero" data-ink="light">
+      <div class="hero-grid z">
+        <div class="hero-copy">
+          <p class="eyebrow fade" style="--d:0">Edukasi Robotik TK – SMK</p>
+          <h1>
+            <span class="ln"><span style="--d:0">Belajar</span></span>
+            <span class="ln"><span style="--d:1">robotik</span></span>
+            <span class="ln"><span style="--d:2">dari nol</span></span>
+          </h1>
+          <p class="lead fade" style="--d:1">
+            Bentuk Robotics mengajarkan sensor, motor, coding, dan merakit robot sungguhan.
+            Cocok untuk siswa TK hingga SMK — fun, praktis, dan siap kompetisi.
+          </p>
+          <a class="btn fade" style="--d:2" href="#work" data-cursor="GO">
+            Lihat karya siswa
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M1 8h13M9 3l5 5-5 5"/>
+            </svg>
+          </a>
+        </div>
+        <div id="heroStage">
+          <p class="hint" id="hint">Sentuh robotnya</p>
+        </div>
+      </div>
+      <div class="scrollcue">Scroll</div>
+    </section>
+
+    <section class="sec mani" id="manifesto" data-state="manifesto" data-ink="light">
+      <div class="mani-in z">
+        <p class="eyebrow">Prinsip kami</p>
+        <h2 id="maniText">Anak belajar paling cepat saat mereka merakit, salah, lalu berhasil sendiri.</h2>
+        <div class="chain" aria-hidden="true">Rakit<i></i>Coba<i></i>Bisa</div>
+      </div>
+    </section>
+
+    <section class="sec curve services" id="services" data-state="services" data-ink="light">
+      <div class="z">
+        <p class="eyebrow">Materi &amp; Tools</p>
+        <h2>Apa yang dipelajari</h2>
+        <div class="cards" id="cards">
+          <article class="card" tabindex="0">
+            <div class="anchor"></div>
+            <h3>Elektronik Dasar</h3>
+            <p>LED, resistor, breadboard, baterai, saklar. Fondasi sebelum menyentuh robot.</p>
+            <a class="more" href="elektronik-dasar.html" aria-label="Detail materi Elektronik Dasar">DETAIL +</a>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="anchor"></div>
+            <h3>Sensor &amp; Motor</h3>
+            <p>Ultrasonik, IR, light sensor, servo, DC motor, stepper. Robot bisa “melihat” dan bergerak.</p>
+            <a class="more" href="sensor-motor.html" aria-label="Detail materi Sensor dan Motor">DETAIL +</a>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="anchor"></div>
+            <h3>Coding</h3>
+            <p>Scratch untuk pemula, Arduino C++ &amp; Python untuk yang sudah siap. Dari blok sampai kode asli.</p>
+            <a class="more" href="coding.html" aria-label="Detail materi Coding">DETAIL +</a>
+          </article>
+          <article class="card" tabindex="0">
+            <div class="anchor"></div>
+            <h3>Rakit &amp; Kompetisi</h3>
+            <p>Line follower, obstacle avoider, sumo, arm robot. Siap ikut lomba sekolah &amp; nasional.</p>
+            <a class="more" href="rakit-kompetisi.html" aria-label="Detail materi Rakit dan Kompetisi">DETAIL +</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec curve cases" id="work" data-state="cases" data-ink="dark">
+      <div class="cases-in z">
+        <div class="cases-head">
+          <div>
+            <p class="eyebrow">Karya siswa</p>
+            <h2>Proyek nyata</h2>
+          </div>
+          <p class="count" id="count" aria-live="polite">01 / 04</p>
+        </div>
+        <div class="track" id="track">
+          <a class="case" href="#contact" data-cursor="VIEW">
+            <div class="art a1"><span class="pd"></span><span class="bt"></span></div>
+            <div class="info">
+              <div><small>Line follower</small><strong>Lintang</strong></div>
+              <span>Lihat</span>
+            </div>
+          </a>
+          <a class="case" href="#contact" data-cursor="VIEW">
+            <div class="art a2"><i></i><i></i><i></i></div>
+            <div class="info">
+              <div><small>Obstacle robot</small><strong>Jaga</strong></div>
+              <span>Lihat</span>
+            </div>
+          </a>
+          <a class="case" href="#contact" data-cursor="VIEW">
+            <div class="art a3"></div>
+            <div class="info">
+              <div><small>Robot lengan</small><strong>Tangan</strong></div>
+              <span>Lihat</span>
+            </div>
+          </a>
+          <a class="case" href="#contact" data-cursor="VIEW">
+            <div class="art a4"><i></i><b></b></div>
+            <div class="info">
+              <div><small>Sumo robot</small><strong>Gajah</strong></div>
+              <span>Lihat</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec curve process" id="studio" data-state="process" data-ink="light">
+      <div class="proc-in z">
+        <div class="proc-copy">
+          <div>
+            <p class="eyebrow" style="margin-bottom:14px">Cara belajar</p>
+            <h2>Dari main sampai jago</h2>
+          </div>
+          <ol class="steps" id="steps">
+            <li class="on">
+              <span class="n">01</span>
+              <h3>Kenalan</h3>
+              <p>Main dulu. Kenal komponen, coba LED berkedip, servo bergerak. Takut hilang.</p>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <h3>Rakit</h3>
+              <p>Gabungkan sensor + motor + board. Robot pertama hidup di tangan siswa.</p>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <h3>Kompetisi</h3>
+              <p>Latih, perbaiki, ikut lomba. Dari tingkat sekolah sampai nasional.</p>
+            </li>
+          </ol>
+        </div>
+        <div id="procStage">
+          <p class="stage-label"><i></i><span id="stageName">Kenalan</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec curve clients" id="clients" data-state="clients" data-ink="light">
+      <div class="mq z" aria-hidden="true">
+        <div class="mq-track">
+          <span>Sensor</span><i class="dot c"></i>
+          <span>Motor</span><i class="dot t"></i>
+          <span>Arduino</span><i class="dot s"></i>
+          <span>Coding</span><i class="dot c"></i>
+        </div>
+      </div>
+      <div class="mq out rev z" aria-hidden="true">
+        <div class="mq-track">
+          <span>Belajar robotik dari nol</span><i class="dot s"></i>
+          <span>Belajar robotik dari nol</span><i class="dot t"></i>
+        </div>
+      </div>
+      <div class="clients-in z">
+        <div class="clients-head">
+          <div>
+            <p class="eyebrow" style="margin-bottom:14px">Partner</p>
+            <h2>Dipercaya sekolah</h2>
+          </div>
+          <p>Workshop, ekstrakurikuler, dan program robotik untuk TK, SD, SMP, hingga SMK. Nama di bawah contoh — ganti dengan partner asli.</p>
+        </div>
+        <div class="logos">
+          <div><i style="border-radius:50%;background:var(--yellow)"></i>SD Bahagia</div>
+          <div><i style="background:var(--blue);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)"></i>SMP Cerdas</div>
+          <div><i style="background:var(--coral);clip-path:polygon(50% 0,100% 100%,0 100%)"></i>SMK Teknik</div>
+          <div><i style="background:var(--green);border-radius:20%"></i>TK Ceria</div>
+          <div><i style="background:var(--pink);border-radius:50% 50% 0 0"></i>Robot Club</div>
+          <div><i style="background:var(--yellow);border-radius:0 100% 0 100%"></i>STEM Lab</div>
+        </div>
+        <div class="stats">
+          <div><b data-to="86">0</b><span>Sekolah partner</span></div>
+          <div><b data-to="12">0</b><span>Kota</span></div>
+          <div><b data-to="340">0</b><span>Siswa aktif</span></div>
+        </div>
+        <div class="awards">
+          <p class="eyebrow">Pencapaian siswa</p>
+          <ul class="aw">
+            <li>
+              <span class="yr">2026</span>
+              <span class="tt">Juara 1 Line Follower</span>
+              <span class="cl">SMK Teknik</span>
+              <i class="sh dot c" style="font-size:20px"></i>
+            </li>
+            <li>
+              <span class="yr">2025</span>
+              <span class="tt">Best Design Robot Arm</span>
+              <span class="cl">SMP Cerdas</span>
+              <i class="sh dot t" style="font-size:20px"></i>
+            </li>
+            <li>
+              <span class="yr">2025</span>
+              <span class="tt">Juara 2 Sumo Robot</span>
+              <span class="cl">Robot Club</span>
+              <i class="sh dot s" style="font-size:20px"></i>
+            </li>
+            <li>
+              <span class="yr">2024</span>
+              <span class="tt">Favorite Project</span>
+              <span class="cl">SD Bahagia</span>
+              <i class="sh dot c" style="font-size:20px"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec curve contact" id="contact" data-state="contact" data-ink="dark">
+      <div class="z">
+        <p class="eyebrow">Daftar / Kerja sama</p>
+        <h2>Mau mulai belajar?</h2>
+        <div class="contact-grid">
+          <form id="brief" novalidate>
+            <div class="row">
+              <div class="fld">
+                <label for="f-name">Nama</label>
+                <input id="f-name" type="text" autocomplete="name" placeholder="Nama siswa / orang tua">
+              </div>
+              <div class="fld">
+                <label for="f-mail">Email / WhatsApp</label>
+                <input id="f-mail" type="email" autocomplete="email" placeholder="email@contoh.com">
+              </div>
+            </div>
+            <div class="fld">
+              <span class="lb" id="bud-l">Jenjang</span>
+              <div class="chips" role="radiogroup" aria-labelledby="bud-l">
+                <input type="radio" name="bud" id="b1" value="tk">
+                <label for="b1">TK – SD</label>
+                <input type="radio" name="bud" id="b2" value="smp" checked>
+                <label for="b2">SMP</label>
+                <input type="radio" name="bud" id="b3" value="smk">
+                <label for="b3">SMA / SMK</label>
+              </div>
+            </div>
+            <div class="fld">
+              <label for="f-msg">Pesan</label>
+              <textarea id="f-msg" rows="3" placeholder="Mau daftar kelas, workshop sekolah, atau tanya-tanya dulu?"></textarea>
+            </div>
+            <div>
+              <button class="btn dark" type="submit">
+                Kirim
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <path d="M1 8h13M9 3l5 5-5 5"/>
+                </svg>
+              </button>
+            </div>
+            <p class="note" id="note" role="status"></p>
+          </form>
+          <div>
+            <div id="contactStage">
+              <p class="hint dark" id="hint2">Geser robotnya</p>
+            </div>
+            <dl class="info-list">
+              <div>
+                <dt>Lokasi</dt>
+                <dd>Tambahkan alamat studio / sekolah</dd>
+              </div>
+              <div>
+                <dt>Jam</dt>
+                <dd>Senin–Sabtu, 09.00–17.00</dd>
+              </div>
+              <div>
+                <dt>Kontak</dt>
+                <dd>hello@bentuk.robotics</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sec curve foot" data-state="footer" data-ink="light">
+    <div class="z">
+      <div class="fshapes" aria-hidden="true">
+        <i class="c"></i>
+        <i class="h"></i>
+        <i class="t"></i>
+        <i class="s"></i>
+      </div>
+      <div class="word" aria-hidden="true">Bentuk</div>
+      <div class="flinks">
+        <nav aria-label="Footer">
+          <a href="#hero">Beranda</a>
+          <a href="#work">Proyek</a>
+          <a href="#clients">Partner</a>
+          <a href="#studio">Cara Belajar</a>
+          <a href="#contact">Daftar</a>
+        </nav>
+        <span>© 2026 Bentuk Robotics. Belajar sambil merakit.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
